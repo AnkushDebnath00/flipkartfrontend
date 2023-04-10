@@ -10,7 +10,7 @@ function Price({ cartItems }) {
   const totalAmount = () => {
     let totprice = 0,
       totdiscount = 0;
-    cartItems.map((item) => {
+    cartItems?.map((item) => {
       totprice += item.price.mrp;
       totdiscount += item.price.mrp - item.price.cost;
     });

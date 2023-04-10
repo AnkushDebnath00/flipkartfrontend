@@ -6,7 +6,11 @@ import { adCovid } from "../../constants/data";
 function AdCovid() {
   return (
     <Box className="mx-auto mt-2 flex w-[99%] justify-center overflow-hidden">
-      <a href="https://www.giveindia.org/index" target="_blank">
+      <a
+        href="https://www.giveindia.org/index"
+        target="_blank"
+        rel="noreferrer"
+      >
         <img
           src={adCovid}
           alt="Advertisement"
