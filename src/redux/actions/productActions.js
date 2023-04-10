@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as actionTypes from "../constants/productConstant";
 
-const URL = `https://flipkart-api-hpmr.onrender.com/`;
+const URL = "https://flipkart-api-hpmr.onrender.com";
 export const getProducts = () => async (dispatch) => {
   try {
     const { data } = await axios.get(`${URL}/products`);
