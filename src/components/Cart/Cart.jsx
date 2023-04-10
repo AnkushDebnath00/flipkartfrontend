@@ -47,7 +47,7 @@ function Cart() {
                     My Cart({cartItems.length})
                   </Typography>
                 </Box>
-                {cartItems.map((item) => (
+                {cartItems?.map((item) => (
                   <CartItem item={item} key={item.id} />
                 ))}
                 <Box className="m-0 flex justify-end bg-white px-3 py-5 md:px-12">

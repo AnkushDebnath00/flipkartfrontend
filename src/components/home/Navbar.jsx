@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <Box className=" mx-auto mt-4 w-full items-center space-x-4 overflow-x-scroll bg-white pb-4 shadow-xl xl:overflow-x-hidden">
       <Box className="flex flex-row justify-start md:justify-evenly xl:px-[40px]">
-        {navData.map((data) => {
+        {navData?.map((data) => {
           return (
             <a
               key={data.text}
