@@ -8,6 +8,8 @@ import Price from "./Price";
 import EmptyCart from "./EmptyCart";
 
 import { Box, Button, Grid, Typography } from "@mui/material";
+import { payUsingPaytm } from "../../sevice/api";
+import { post } from "../../utils/paytm";
 
 function Cart() {
   const cartDetails = useSelector((state) => state.cart);
@@ -23,17 +25,17 @@ function Cart() {
   const removeItemFromCart = (id) => {
     dispatch(removeFromCart(id));
   };
-  // const buyNow = async () => {
-  //   let response = await payUsingPaytm({
-  //     amount: 500,
-  //     email: "kunaltyagi@gmail.com",
-  //   });
-  //   var information = {
-  //     action: "https://securegw-stage.paytm.in/order/process",
-  //     params: response,
-  //   };
-  //   post(information);
-  // };
+  const buyNow = async () => {
+    let response = await payUsingPaytm({
+      amount: 500,
+      email: "ankushdebnath00@gmail.com",
+    });
+    let information = {
+      action: "https://securegw-stage.paytm.in/order/process",
+      params: response,
+    };
+    post(information);
+  };
 
   return (
     <>
@@ -51,7 +53,10 @@ function Cart() {
                   <CartItem item={item} key={item.id} />
                 ))}
                 <Box className="m-0 flex justify-end bg-white px-3 py-5 md:px-12">
-                  <Button className="rounded-sm bg-[#fb641b] px-12 py-3 text-white md:px-16">
+                  <Button
+                    className="rounded-sm bg-[#fb641b] px-12 py-3 text-white md:px-16"
+                    onClick={() => buyNow()}
+                  >
                     Place Order
                   </Button>
                 </Box>
