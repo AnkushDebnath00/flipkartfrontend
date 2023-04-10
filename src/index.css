@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mobInvisible {
+    @apply hidden md:flex;
+  }
+  .mobVisible {
+    @apply flex md:hidden;
+  }
+}
+
+* {
+  @apply font-roboto;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.element {
+  overflow: -moz-scrollbars-none !important;
+}
+.element {
+  -ms-overflow-style: none;
+}
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+  border-radius: 0 !important;
+}
