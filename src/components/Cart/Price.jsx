@@ -48,7 +48,7 @@ function Price({ cartItems }) {
               <span className="float-right text-[#388e3c]">FREE</span>
             </Typography>
           </Box>
-          <Box className="m-0 mt-3 border-t-[1px] border-b-[1px] border-dotted bg-white px-3 py-5 md:px-12">
+          <Box className="m-0 mt-3 border-t-[1px] border-b-[1px] border-dotted bg-white px-2 py-5">
             <Typography className="text-base font-semibold text-[#212121]/80">
               Total Price{" "}
               <span className="float-right ">
@@ -56,7 +56,7 @@ function Price({ cartItems }) {
               </span>
             </Typography>
           </Box>
-          <Box className="m-0 bg-white px-3 py-2 md:px-12">
+          <Box className="m-0 bg-white px-2 py-2">
             <Typography className="text-sm font-medium text-[#388e3c]">
               You'll save ₹
               {price -
